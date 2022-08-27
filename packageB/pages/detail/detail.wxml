@@ -1,0 +1,54 @@
+<!--packageB/pages/detail/detail.wxml-->
+<view class="detail-container">
+  <view class="detailBooks">
+    <view class="joinBooks" bindtap="joinBooksFn">
+      <image class="joinBooks-img" src="../../../img/joinBooks.png"></image>
+      <text class="joinBooks-txt">加入书架</text>
+    </view>
+    <view class="detailBooks-first">
+      <image class="detailBooks-img" src="{{detailList.cover_image_url}}"></image>
+      <text class="detailBooks-status">{{detailList.signing_status}}</text>
+    </view>
+    <view class="detailBooks-title">{{detailList.title}}</view>
+    <view class="detailBooks-name">{{detailList.user.nickname}}</view>
+    <view class="detailBooks-des">{{detailList.description}}</view>
+    <view class="detailBooks-likes">
+      <view class="pl">
+        <image class="likeImg" src="../../../img/pl.png"></image>
+        <view class="likeCount">{{detailList.comments_count}}</view>
+      </view>
+      <view class="dz">
+        <image class="likeImg" src="../../../img/dianzan.png"></image>
+        <view class="likeCount">{{detailList.likes_count}}</view>
+      </view>
+      <view class="sc">
+        <image class="likeImg" src="../../../img/shoucang.png"></image>
+        <view class="likeCount">{{detailList.popularity_info}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="detailBox" wx:for="{{detailList.comics}}" wx:key="id" bindtap="ToDetailFn" data-ids="{{item.id}}">
+    <view class="left">
+      <!-- 图漫封面 -->
+      <image class="cover" src="{{item.cover_image_url}}"></image>
+    </view>
+    <view class="right">
+      <!-- 图漫名字 -->
+      <view class="title">{{item.title}} </view>
+      <!-- 是否需要VIP -->
+      <block wx:if="{{item.need_vip === true}}">
+        <text class="txtKeys1">VIP</text>
+      </block>
+      <block wx:else>
+        <text class="txtKeys1">免费</text>
+      </block>
+      <!-- 更新时间 -->
+      <view class="author">{{item.created_at}}</view>
+      <!-- 阅读次数 -->
+      <view class="like">
+        <image class="likeImg" src="../../../img/like.png"></image>
+        <view class="likeCount">{{item.likes_count_number}}</view>
+      </view>
+    </view>
+  </view>
+</view>

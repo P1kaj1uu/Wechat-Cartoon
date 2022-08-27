@@ -1,0 +1,16 @@
+<!--packageA/pages/usage/usage.wxml-->
+<view class="usage-container">
+  <view class="special">设计初心：为了让阳仔仔开心！</view>
+  <view class="usage">1.图漫分类</view>
+  <view class="usage">小程序包含很多种图漫分类。</view>
+  <view class="usage">2.图漫搜索</view>
+  <view class="usage">小程序在搜索框中搜索关键词，可查询出该图漫的具体细节。</view>
+  <view class="usage">3.图漫阅读</view>
+  <view class="usage">小程序单击某图漫可阅读其详细内容。</view>
+  <view class="usage">4.图漫推荐</view>
+  <view class="usage">小程序日推菜单栏。</view>
+  <view class="usage">5.图漫书架</view>
+  <view class="usage">小程序图漫详情页面可将该图漫加入书架，在书架菜单栏中可查看我的收藏。</view>
+  <view class="usage">6.菜谱做法</view>
+  <view class="usage">小程序在"我的"选项卡页面，单击"附加功能"，可进入菜谱做法页面，然后可根据喜好搜索菜名，学习该菜的做法。</view>
+</view>

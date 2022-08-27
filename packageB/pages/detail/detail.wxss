@@ -1,0 +1,165 @@
+/* packageB/pages/detail/detail.wxss */
+.detailBox {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaaaaa;
+}
+.detailBox .left {
+  width: 50px;
+  height: 50px;
+}
+.detailBox .left .cover {
+  width: 80px;
+  height: 80px;
+}
+.detailBox .right {
+  width: calc(100vw - 80px);
+  height: 80px;
+  text-indent: .6em;
+  position: relative;
+}
+.detailBox .right .title {
+  font-size: 15px;
+  font-weight: 600;
+  color: pink;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detailBox .right .author {
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detailBox .right .shortIntro {
+  margin-top: 5px;
+  font-size: 13px;
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;
+}
+.detailBox .right .txtKeys1 {
+  position: absolute;
+  left: -88px;
+  bottom: 0px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #D8BFD8;
+}
+.detailBox .right .txtKeys2 {
+  position: absolute;
+  left: -88px;
+  bottom: 16px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #D8BFD8;
+}
+.detailBox .right .like {
+  display: flex;
+  justify-content: flex-end;
+  height: 20px;
+  margin-top: 20px;
+}
+.detailBox .right .like .likeImg {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.detailBox .right .like .likeCount {
+  font-size: 11px;
+  height: 20px;
+  color: #F08080;
+  line-height: 20px;
+  text-align: center;
+}
+.detailBooks {
+  width: 100%;
+  /* border-bottom: 1px solid #DDA0DD; */
+  margin-bottom: 5px;
+}
+.detailBooks .joinBooks {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.detailBooks .joinBooks .joinBooks-img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.detailBooks .joinBooks .joinBooks-txt {
+  font-size: 14px;
+}
+.detailBooks .detailBooks-first {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.detailBooks .detailBooks-first .detailBooks-img {
+  width: 100px;
+  height: 100px;
+}
+.detailBooks .detailBooks-first .detailBooks-status {
+  font-size: 10px;
+  background-color: #D8BFD8;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+}
+.detailBooks .detailBooks-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #E9967A;
+  text-align: center;
+  margin-top: 15px;
+}
+.detailBooks .detailBooks-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 5px;
+  text-align: center;
+}
+.detailBooks .detailBooks-des {
+  font-size: 13px;
+  margin-top: 5px;
+  text-indent: 2em;
+}
+.detailBooks .detailBooks-likes {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.detailBooks .detailBooks-likes .pl {
+  display: flex;
+}
+.detailBooks .detailBooks-likes .dz {
+  display: flex;
+}
+.detailBooks .detailBooks-likes .sc {
+  display: flex;
+}
+.detailBooks .detailBooks-likes .likeImg {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.detailBooks .detailBooks-likes .likeCount {
+  font-size: 11px;
+  height: 20px;
+  color: #F08080;
+  line-height: 20px;
+  text-align: center;
+}

@@ -1,0 +1,59 @@
+/* pages/ads/ads.wxss */
+.ads-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* 解决渲染层报错问题 */
+  touch-action: pan-y;
+}
+.ads-container .ads-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid red;
+  font-size: 14px;
+  color: red;
+}
+.center-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.van-swipe-cell_slot {
+  display: inline-block;
+  width: 65px;
+  height: 100%;
+  font-size: 15px;
+  color: #fff;
+}
+.van-swipe-cell_slot-container {
+  height: 100%;
+  width: 100%;
+}
+.red-background{
+  background-color: red;
+}
+.van-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #E9967A;
+}
+.van-card__desc {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 3;
+}
+.van-empty {
+  padding: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

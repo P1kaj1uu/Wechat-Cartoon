@@ -1,0 +1,28 @@
+/* packageA/pages/location/location.wxss */
+.box {
+  width: 95%;
+  height: 100vh;
+  padding: 5px;
+  margin: 0 auto;
+  background-color: #F5F5F5;
+}
+.location-container {
+  margin: 100px auto;
+  width: 250px;
+  height: 200px;
+  margin-left: 100px;
+}
+.location {
+  margin: auto;
+  width: 100vw;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.location-container .strong {
+  font-weight: 700;
+}
+.location-container .location-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

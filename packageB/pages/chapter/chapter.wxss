@@ -1,0 +1,24 @@
+/* packageB/pages/chapter/chapter.wxss */
+.title {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 17px;
+}
+.btns {
+  display: flex;
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btns .btn-prev {
+  margin: 0;
+  margin-right: 40px;
+  font-size: 15px;
+}
+.btns .btn-next {
+  font-size: 15px;
+}

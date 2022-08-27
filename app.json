@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/ads/ads",
+    "pages/my/my"
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "name": "分包A",
+      "pages": [
+        "pages/location/location",
+        "pages/usage/usage",
+        "pages/version/version",
+        "pages/menu/menu"
+      ],
+      "independent": true
+    },
+    {
+      "root": "packageB",
+      "name": "分包B",
+      "pages": [
+        "pages/rankId/rankId",
+        "pages/search/search",
+        "pages/detail/detail",
+        "pages/chapter/chapter"
+      ],
+      "independent": true
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "代码别报错求求了",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#808080",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/index-static.png",
+        "selectedIconPath": "img/index-active.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "日推",
+        "iconPath": "img/classify-static.png",
+        "selectedIconPath": "img/classify-active.png"
+      },
+      {
+        "pagePath": "pages/ads/ads",
+        "text": "书架",
+        "iconPath": "img/books-static.png",
+        "selectedIconPath": "img/books-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/my-static.png",
+        "selectedIconPath": "img/my-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-empty": "@vant/weapp/empty/index"
+  }
+}

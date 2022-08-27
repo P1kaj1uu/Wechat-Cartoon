@@ -1,0 +1,51 @@
+<!--packageA/pages/menu/menu.wxml-->
+<view class="menu-container">
+  <!-- 搜索区域 -->
+  <view class="search">
+    <image src="../../../img/menu.png" class="menuImg"></image>
+    <input value="{{menuName}}" bindinput="inputChangeFn" class="weui-input" auto-focus placeholder="请输入菜名"/>
+    <button class="searchBtn" bindtap="ToSearchMenuFn">查询</button>
+  </view>
+  <!-- 内容区域 -->
+  <view class="content error" wx:if="{{menuList.length === 0}}">暂无菜谱，请输入正确菜名后再查询...</view>
+  <view class="content" wx:else>
+    <!-- 查询的菜名 -->
+    <view class="contentName">{{menuFirstName}}</view>
+    <view wx:for="{{menuList}}" wx:key="id">
+      <view class="menuItem">
+        <text class="special">菜品类别</text>：{{item.type_name}}
+      </view>
+      <view class="menuItem">
+        <text class="special">菜品名称</text>：{{item.cp_name}}
+      </view>
+      <view class="menuItem">
+        <text class="special">菜品做法</text>：{{item.zuofa}}
+      </view>
+      <view wx:if="{{item.texing !== ''}}" class="menuItem">
+        <text class="special">菜品特性</text>：{{item.texing}}
+      </view>
+      <view wx:if="{{item.texing === ''}}" class="menuItem">
+        <text class="special">菜品特性</text>：暂无
+      </view>
+      <view wx:if="{{item.tishi !== ''}}" class="menuItem">
+        <text class="special">菜品提示</text>：{{item.tishi}}
+      </view>
+      <view wx:if="{{item.tishi === ''}}" class="menuItem">
+        <text class="special">菜品提示</text>：暂无
+      </view>
+      <view wx:if="{{item.tiaoliao !== ''}}" class="menuItem">
+        <text class="special">菜品调料</text>：{{item.tiaoliao}}
+      </view>
+      <view wx:if="{{item.tiaoliao === ''}}" class="menuItem">
+        <text class="special">菜品调料</text>：暂无
+      </view>
+      <view wx:if="{{item.yuanliao !== ''}}" class="menuItem">
+        <text class="special">菜品原料</text>：{{item.yuanliao}}
+      </view>
+      <view wx:if="{{item.yuanliao === ''}}" class="menuItem">
+        <text class="special">菜品原料</text>：暂无
+      </view>
+      <view wx:if="{{menuList.length >= 2}}" class="menuItem">------------------------------</view>
+    </view>
+  </view>
+</view>

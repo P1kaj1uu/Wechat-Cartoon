@@ -1,0 +1,61 @@
+<!--pages/my/my.wxml-->
+<view class="my-container">
+  <!-- 头像区域 -->
+  <view class="avatar">
+    <block wx:if="{{!userInfo}}">
+      <image class="avatarImg" wx:if="{{avatarStart}}" src="../../img/{{avatarStart}}.png"></image>
+      <view class="avatarLogin" bindtap="login">微信用户</view>
+    </block>
+    <block wx:else>
+      <image class="avatarImg" src="{{userInfo.avatarUrl}}"></image>
+      <view class="avatarLogin" bindtap="login">{{userInfo.nickName}}</view>
+    </block>
+  </view>
+  <!-- 登录信息 -->
+  <view class="edit" wx:if="{{userInfo}}">
+    <image class="editImg" src="../../img/edit.png" bindtap="getIpInfo"></image>
+    <view class="txt" bindtap="getIpInfo">登录信息</view>
+    <image class="right" src="../../img/right.png" bindtap="getIpInfo"></image>
+  </view>
+  <!-- 登录与退出 -->
+  <view class="isLogin">
+    <block wx:if="{{!userInfo}}" bindtap="login">
+      <!-- 登录 -->
+      <image class="login" src="../../img/loginImg.png" bindtap="login"></image>
+      <view class="txt" bindtap="login">前往登录</view>
+      <image class="right" src="../../img/right.png" bindtap="login"></image>
+    </block>
+    <block wx:else>
+      <!-- 退出 -->
+      <image class="login" src="../../img/unloginImg.png" bindtap="quitLogin"></image>
+      <view class="txt" bindtap="quitLogin">退出登录</view>
+      <image class="right" src="../../img/right.png" bindtap="quitLogin"></image>
+    </block>
+  </view>
+  <!-- 附加功能 -->
+  <view class="setting" bindtap="ToExtraMenuFn">
+    <image class="settingImg" src="../../img/setting.png"></image>
+    <view class="txt">附加功能</view>
+    <image class="right" src="../../img/right.png"></image>
+  </view>
+  <!-- 分享 -->
+  <view class="share" style="border-left-color: transparent;">
+    <button open-type="share" class="share" style="border: 0; background-color: #ffffff;border-color: transparent; padding: 0;">
+      <image class="shareImg" src="../../img/share.png"></image>
+      <view class="txt" style="text-align: left; font-size: 16px; color: #000000;">关联分享</view>
+      <image class="right" src="../../img/right.png"></image>
+    </button>
+  </view>
+  <!-- 使用说明 -->
+  <view class="usage" bindtap="ToUsageFn">
+    <image class="usageImg" src="../../img/usage.png"></image>
+    <view class="txt">使用说明</view>
+    <image class="right" src="../../img/right.png"></image>
+  </view>
+  <!-- 版本说明 -->
+  <view class="version" bindtap="ToVersionFn">
+    <image class="versionImg" src="../../img/version.png"></image>
+    <view class="txt">版本说明</view>
+    <image class="right" src="../../img/right.png"></image>
+  </view>
+</view>

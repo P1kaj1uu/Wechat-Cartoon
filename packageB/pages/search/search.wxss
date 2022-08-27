@@ -1,0 +1,99 @@
+/* packageB/pages/search/search.wxss */
+.search-container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.search-container .search {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  border: 1px solid black;
+}
+.search-container .search .searchImg {
+  flex: 1;
+  height: 55px;
+}
+.search-container .search .weui-input {
+  flex: 6;
+  height: 55px;
+}
+.search-container .search .searchBtn {
+  flex: 1;
+  font-size: 17px;
+  background-color: #ffffff;
+  height: 55px;
+  border: 0;
+  line-height: 55px;
+  text-align: center;
+}
+.search-container .search .searchBtn::after {
+  border: none;
+}
+.search-container .error {
+  margin-top: 8px;
+  color: red;
+  text-align: center;
+}
+.rankIdBox {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaaaaa;
+}
+.rankIdBox .left {
+  width: 50px;
+  height: 50px;
+}
+.rankIdBox .left .cover {
+  width: 80px;
+  height: 80px;
+}
+.rankIdBox .right {
+  width: calc(100vw - 80px);
+  height: 80px;
+  text-indent: .6em;
+  position: relative;
+}
+.rankIdBox .right .title {
+  font-size: 15px;
+  font-weight: 600;
+  color: pink;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rankIdBox .right .author {
+  font-size: 13px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rankIdBox .right .shortIntro {
+  margin-top: 5px;
+  font-size: 13px;
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;
+}
+.rankIdBox .right .txtKeys1 {
+  position: absolute;
+  left: -88px;
+  bottom: 0px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #D8BFD8;
+}
+.rankIdBox .right .txtKeys2 {
+  position: absolute;
+  left: -88px;
+  bottom: 16px;
+  font-size: 10px;
+  text-align: center;
+  background-color: #D8BFD8;
+}

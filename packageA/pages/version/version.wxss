@@ -1,0 +1,14 @@
+/* packageA/pages/version/version.wxss */
+.version-container .special {
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+}
+.version-container {
+  padding: 5px;
+  width: 95%;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 14px;
+  background-color:	#F5F5F5;
+}

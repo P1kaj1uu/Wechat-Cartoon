@@ -1,0 +1,19 @@
+<!--packageB/pages/rankId/rankId.wxml-->
+<view class="rankId-container">
+  <view class="rankIdBox" wx:for="{{hotList}}" wx:key="id" bindtap="ToDetailFn" data-ids="{{item.id}}">
+    <view class="left">
+      <!-- 图漫封面 -->
+      <image class="cover" src="{{item.cover_image_url}}"></image>
+    </view>
+    <view class="right">
+      <!-- 图漫名字 -->
+      <view class="title">{{item.title}} </view>
+      <!-- 图漫作者 -->
+      <view class="author">--- {{item.user.nickname}}</view>
+      <!-- 图漫关键词 -->
+      <text class="txtKeys1">{{item.tags}}</text>
+      <!-- 图漫描述 -->
+      <view class="shortIntro">{{item.description}}</view>
+    </view>
+  </view>
+</view>

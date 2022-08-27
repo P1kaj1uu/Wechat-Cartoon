@@ -1,0 +1,13 @@
+<!--packageB/pages/chapter/chapter.wxml-->
+<view class="chapter-container">
+  <view class="title">{{title}}</view>
+  <view class="view_list">
+    <view wx:for="{{chapterList}}" wx:key="index">
+      <image class="mypic" src="{{item.url}}" style="width: 100%; height: 300px;"></image>
+    </view>
+  </view>
+  <!-- <view class="btns">
+    <button class="btn-prev" bindtap="ToprevFn">上一集</button>
+    <button class="btn-next" bindtap="TonextFn">下一集</button>
+  </view> -->
+</view>

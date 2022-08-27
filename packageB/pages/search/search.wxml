@@ -1,0 +1,31 @@
+<!--packageB/pages/search/search.wxml-->
+<view class="search-container">
+  <!-- 搜索区域 -->
+  <view class="search">
+    <image src="../../../img/book.png" class="searchImg"></image>
+    <input value="{{searchName}}" bindinput="inputChangeFn" class="weui-input" auto-focus placeholder="请输入关键字"/>
+    <button class="searchBtn" bindtap="ToSearchBooksFn">查询</button>
+  </view>
+  <!-- 内容区域 -->
+  <block wx:if="{{searchList.length === 0}}">
+    <view class="error">暂无请输入后再查询...</view>
+  </block>
+  <block wx:else>
+    <view class="rankIdBox" wx:for="{{searchList}}" wx:key="id" bindtap="ToDetailFn" data-ids="{{item.id}}">
+      <view class="left">
+        <!-- 图漫封面 -->
+        <image class="cover" src="{{item.cover_image_url}}"></image>
+      </view>
+      <view class="right">
+        <!-- 图漫名字 -->
+        <view class="title">{{item.title}} </view>
+        <!-- 图漫作者 -->
+        <view class="author">--- {{item.user.nickname}}</view>
+        <!-- 图漫关键词 -->
+        <text class="txtKeys1">{{item.tags}}</text>
+        <!-- 图漫描述 -->
+        <view class="shortIntro">{{item.description}}</view>
+      </view>
+    </view>
+  </block>
+</view>

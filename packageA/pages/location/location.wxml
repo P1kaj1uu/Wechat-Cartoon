@@ -1,0 +1,49 @@
+<!--packageA/pages/location/location.wxml-->
+<view class="box">
+  <view class="location-container">
+    <view class="location">当前登录信息如下：</view>
+    <view class="location-item">
+      <block wx:if="{{ipList.country !== ''}}">
+        <text class="strong">国家</text>：{{ipList.country}}
+      </block>
+      <block wx:else>
+        <text class="strong">国家</text>：未知
+      </block>
+    </view>
+    <view class="location-item">
+      <block wx:if="{{ipList.province !== ''}}">
+        <text class="strong">省份</text>：{{ipList.province}}
+      </block>
+      <block wx:else>
+        <text class="strong">省份</text>：未知
+      </block>
+    </view>
+    <view class="location-item">
+      <block wx:if="{{ipList.city !== ''}}">
+        <text class="strong">城市</text>：{{ipList.city}}
+      </block>
+      <block wx:else>
+        <text class="strong">城市</text>：未知
+      </block>
+    </view>
+    <view class="location-item">
+      <block wx:if="{{ipList.area !== ''}}">
+        <text class="strong">区县</text>：{{ipList.area}}
+      </block>
+      <block wx:else>
+        <text class="strong">区县</text>：未知
+      </block>
+    </view>
+    <view class="location-item">
+      <block wx:if="{{ipList.ip !== ''}}">
+        <text class="strong">IP</text>：{{ipList.ip}}
+      </block>
+      <block wx:else>
+        <text class="strong">IP</text>：未知
+      </block>
+    </view>
+    <view class="location-item">
+      <text class="strong">时间</text>：{{time}}
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/ads/ads.wxml-->
+<view class="ads-container">
+  <!-- 未登录时 -->
+  <block wx:if="{{userInfo === null}}">
+    <view class="ads-login" bindtap="ToLoginFn">前往登录</view>
+  </block>
+  <!-- 已登录时 -->
+  <block wx:else>
+    <block wx:if="{{books.length === 0}}">
+      <van-empty
+        class="custom-image"
+        image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+        description="暂无收藏"
+      />
+    </block>
+    <block wx:else>
+      <van-swipe-cell right-width="{{ 65 }}" wx:for="{{books}}" wx:key="id">
+        <van-cell-group>
+          <van-card
+            desc="{{item.description}}"
+            title="{{item.title}}"
+            thumb="{{item.cover_image_url}}"
+            bindtap="toDetailFn"
+            data-idx="{{item.id}}"
+          />
+        </van-cell-group>
+        <view slot="right" class="van-swipe-cell_slot red-background" bindtap="deteleBooksFn" data-id="{{item.id}}">
+          <view class="van-swipe-cell_slot-container center-row">删除</view>
+        </view>
+      </van-swipe-cell>
+    </block>
+  </block>
+</view>

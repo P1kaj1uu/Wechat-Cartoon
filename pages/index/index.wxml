@@ -1,0 +1,67 @@
+<view class="index-container">
+  <!-- 轮播图区域 -->
+  <view class="swiper-container">
+    <swiper class="swiper-list" indicator-dots="true" indicator-color="rgb(255, 255, 255)" indicator-active-color="#87CEFA" autoplay="true" interval="3000" circular="true" duration="500">
+        <block wx:for="{{swperList}}" wx:key="swperId">
+          <swiper-item>
+            <image mode="heightFix" show-menu-by-longpress="true" src="{{item.swperSrc}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+  </view>
+  <!-- 搜索框区域 -->
+  <view class="searchBooks" bindtap="ToSearch">搜索图漫...</view>
+  <!-- 热门图漫 -->
+  <view class="rankList">
+    <view class="rankName1" style="width: 21%;">热门图漫</view>
+    <view class="recomand-list">
+      <view class="recomand-item" wx:for="{{epubList}}" wx:key="target_id" bindtap="ToDetailFn" data-ids="{{item.target_id}}">
+        <image class="recomandImg" src="{{item.background_image_url}}"></image>
+        <view class="recomandAuthor">{{item.target_title}}</view>
+        <view class="recomandSearch">共搜索{{item.heat_count}}次</view>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐榜单 -->
+  <view class="rankList">
+    <view class="rankName1" style="width: 21%;">热门榜单</view>
+    <view class="epub-list">
+      <view
+        wx:for="{{hotList}}"
+        wx:key="rank_id"
+        class="epub-item"
+        style="background-color: #D8BFD8;"
+        bindtap="ToHotRankById"
+        data-id="{{item.rank_id}}"
+      >{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 排行榜类型女性喜爱
+  <view class="rankList">
+    <view class="rankName2">排行榜类型女性喜爱</view>
+    <view class="female-list">
+      <view
+        wx:for="{{femaleList}}"
+        wx:key="_id"
+        class="female-item"
+        style="background-color: {{color}};"
+        bindtap="ToRankById"
+        data-id="{{item._id}}"
+      >{{item.title}}</view>
+    </view>
+  </view>
+  <!-- 排行榜类型男性喜爱 -->
+  <!-- <view class="rankList">
+    <view class="rankName3">排行榜类型男性喜爱</view>
+    <view class="male-list">
+      <view
+        wx:for="{{maleList}}"
+        wx:key="_id"
+        class="male-item"
+        style="background-color: {{color}};"
+        bindtap="ToRankById"
+        data-id="{{item._id}}"
+      >{{item.title}}</view>
+    </view> -->
+  <!-- </view> -->
+</view>

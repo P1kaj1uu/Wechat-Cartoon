@@ -1,0 +1,24 @@
+<!--packageA/pages/version/version.wxml-->
+<view class="version-container">
+  <view class="special">特别说明：如有问题，请联系微信Dveiklokk</view>
+  <view>------------------------------</view>
+  <view>测试版本v1.0</view>
+  <view>2022年8月18日</view>
+  <view>1、无产品原型图、无UI设计，自主设计整体页面布局及功能展示</view>
+  <view>2、实现小程序基本布局结构</view>
+  <view>------------------------------</view>
+  <view>测试版本v2.0</view>
+  <view>2022年8月20日</view>
+  <view>1、新增图漫推荐功能</view>
+  <view>2、新增图漫搜索及阅读功能</view>
+  <view>3、新增图漫加入书架功能</view>
+  <view>4、新增分享助手、附加功能</view>
+  <view>5、实现小程序页面逻辑功能</view>
+  <view>6、优化安卓和苹果端界面细节问题</view>
+  <view>------------------------------</view>
+  <view>上线版本v3.0</view>
+  <view>暂定2022年8月25日</view>
+  <view>1、测试小程序</view>
+  <view>2、部署服务器上线</view>
+  <view>------------------------------</view>
+</view>
